@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Link,
   Route,
@@ -88,10 +88,7 @@ const Home: React.FC = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const isActive = useCallback(
-    (id: string) => location.pathname.includes(id),
-    [location]
-  );
+  const isActive = (id: string) => location.pathname.includes(id);
 
   useEffect(() => {
     const handleResize = throttle(() => {

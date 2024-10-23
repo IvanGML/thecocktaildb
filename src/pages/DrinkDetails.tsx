@@ -66,7 +66,6 @@ const DrinkDetails: React.FC<{ nameAsProp?: string }> = ({ nameAsProp }) => {
 
   if (isLoading) return <p>Loading...</p>;
   if (error) return <p>Error fetching data</p>;
-  //
 
   if (data && data.drinks) {
     const drink = data.drinks[0];
